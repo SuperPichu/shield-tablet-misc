@@ -1,0 +1,11 @@
+ui_print("SuperPichu's Lollipop Kernel for Shield Tablet");
+ui_print("Extracting Kernel.....");
+run_program("/sbin/busybox", "mkdir", "/tmp");
+package_extract_dir("img", "/tmp");
+set_progress(0.500000);
+ui_print("Flashing Kernel.....");
+run_program("/sbin/busybox", "dd", "if=/tmp/boot.img", "of=/dev/block/platform/sdhci-tegra.3/by-name/LNX");
+ui_print("Cleaning up.....");
+run_program("/sbin/busybox", "rm", "-r", "/tmp");
+set_progress(1.000000);
+ui_print("Success");
