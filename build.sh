@@ -3,7 +3,8 @@ export ARCH=arm
 export CROSS_COMPILE=arm-eabi-
 export PATH=~/dev/android-toolchain-eabi/bin:$PATH
 cd ~/dev/shield-tablet/shield-tablet-kernel
-export version=$1
+echo -n "Enter version: "
+read version
 make -j 10 clean
 make -j 10 tegra12_android_defconfig
 make -j 10 tegra124-tn8-p1761-1270-a04-e-battery.dtb
