@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<latest>
+	<version>1.4</version>
+	<links>
+		<wx_na_do url="http://github.com/SuperPichu/shield-tablet-kernel/releases/download/1.4/Kernel-LTE-US-1.4.zip"/>
+		<wx_un_do url="http://github.com/SuperPichu/shield-tablet-kernel/releases/download/1.4/Kernel-LTE-ROW-1.4.zip"/>
+		<wx_na_wf url="http://github.com/SuperPichu/shield-tablet-kernel/releases/download/1.4/Kernel-WiFi-1.4.zip"/>
+	</links>
+</latest>
