@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 export ARCH=arm
 export CROSS_COMPILE=arm-eabi-
-export PATH=~/dev/android-toolchain-eabi/bin:$PATH
+export PATH=~/dev/arm-eabi-4.6/bin:$PATH
 cd ~/dev/shield-tablet/shield-tablet-kernel
 adb reboot bootloader
 make -j 10 clean
