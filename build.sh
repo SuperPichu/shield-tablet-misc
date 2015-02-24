@@ -1,12 +1,14 @@
 #!/usr/bin/bash
 export ARCH=arm
 export CROSS_COMPILE=arm-eabi-
-export PATH=~/dev/arm-eabi-4.6/bin:$PATH
-cd ~/dev/shield-tablet/shield-tablet-kernel
+export PATH=~/dev/linaro-4.9/bin:$PATH
+cd ~/dev/shield-tablet/linux-3.10
 echo -n "Enter version: "
 read version
 sed -i 4c"EXTRAVERSION = +$version" Makefile
+echo "$version" > changelog.txt
 make -j 10 clean
+make mrproper
 make -j 10 tegra12_android_defconfig
 make -j 10 tegra124-tn8-p1761-1270-a04-e-battery.dtb
 make -j 10
